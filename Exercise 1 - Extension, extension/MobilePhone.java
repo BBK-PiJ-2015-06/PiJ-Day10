@@ -1,9 +1,9 @@
 public class MobilePhone extends OldPhone {
 	
-	private int[] callNumbers;
+	private String[] callNumbers;
 	
 	public MobilePhone() {
-		int[] callNumbers = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		String[] callNumbers = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	}
 	
 	@Override
@@ -19,10 +19,6 @@ public class MobilePhone extends OldPhone {
 		callNumbers[2] = callNumbers[1];
 		callNumbers[1] = callNumbers[0];
 		callNumbers[0] = number;
-	}
-	
-	public MobilePhone() {
-		int[] callNumbers = new int[10];
 	}
 	
 	public void ringAlarm(String event) {
