@@ -1,6 +1,6 @@
 public class SmartPhone extends MobilePhone {
 	
-	public Smartphone() {
+	public SmartPhone() {
 		super();
 	}
 	
@@ -9,7 +9,9 @@ public class SmartPhone extends MobilePhone {
 	}
 	
 	public int findPosition() {
-		System.out.println("GPS-found position: 9832767032735");
+		int output = 767032735;
+		System.out.println("GPS-found position: " + output);
+		return output;
 	}
 	
 }
