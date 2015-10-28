@@ -8,6 +8,7 @@ public class SmartPhone extends MobilePhone {
 	public void call(String number) {
 		if(number.substring(0,2).equals("00")) {
 			System.out.println("Calling " + number + " through the internet to save money.");
+			populateRecentCalls(number);
 		} else {
 			super.call(number);
 		}

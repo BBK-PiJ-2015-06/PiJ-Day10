@@ -2,6 +2,7 @@ public class OldPhone implements Phone {
 	
 	//Field
 	private String brand = null;
+	private String number = null;
 	
 	//Constructor method
 	public OldPhone(String brand) {
@@ -14,6 +15,7 @@ public class OldPhone implements Phone {
 	
 	public void call(String number) {
 		System.out.println("Calling " + number);
+		this.number = number;
 	} 
 	
 }
