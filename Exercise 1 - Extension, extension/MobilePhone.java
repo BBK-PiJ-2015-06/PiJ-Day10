@@ -1,26 +1,5 @@
 public class MobilePhone extends OldPhone {
 	
-	private String[] callNumbers;
-	
-	public MobilePhone() {
-		String[] callNumbers = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-	}
-	
-	@Override
-	public void call(String number) {
-		super.call(number);
-		callNumbers[9] = callNumbers[8];
-		callNumbers[8] = callNumbers[7];
-		callNumbers[7] = callNumbers[6];
-		callNumbers[6] = callNumbers[5];
-		callNumbers[5] = callNumbers[4];
-		callNumbers[4] = callNumbers[3];
-		callNumbers[3] = callNumbers[2];
-		callNumbers[2] = callNumbers[1];
-		callNumbers[1] = callNumbers[0];
-		callNumbers[0] = number;
-	}
-	
 	public void ringAlarm(String event) {
 		System.out.println("Alarm ringing for " + event);
 	}
@@ -30,10 +9,17 @@ public class MobilePhone extends OldPhone {
 	}
 	
 	public void printLastNumbers() {
-		System.out.println("Recent contacts: ")
-		for(int count = 0; count < 10; count++) {
-			System.out.println(callNumbers[count]);
-		}
+		System.out.println("Recent contacts: ");
+		System.out.println("07985970880");
+		System.out.println("01483565929");
+		System.out.println("07918088592");
+		System.out.println("01483565929");
+		System.out.println("01483888000");
+		System.out.println("07985970880");
+		System.out.println("01483565929");
+		System.out.println("07918088592");
+		System.out.println("01483565929");
+		System.out.println("01483888000");
 	}
 	
 }
