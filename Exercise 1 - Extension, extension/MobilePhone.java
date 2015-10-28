@@ -1,7 +1,28 @@
 public class MobilePhone extends OldPhone {
 	
+	private int[] callNumbers;
+	
 	public MobilePhone() {
-		super();
+		int[] callNumbers = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	}
+	
+	@Override
+	public void call(String number) {
+		super.call(number);
+		callNumbers[9] = callNumbers[8];
+		callNumbers[8] = callNumbers[7];
+		callNumbers[7] = callNumbers[6];
+		callNumbers[6] = callNumbers[5];
+		callNumbers[5] = callNumbers[4];
+		callNumbers[4] = callNumbers[3];
+		callNumbers[3] = callNumbers[2];
+		callNumbers[2] = callNumbers[1];
+		callNumbers[1] = callNumbers[0];
+		callNumbers[0] = number;
+	}
+	
+	public MobilePhone() {
+		int[] callNumbers = new int[10];
 	}
 	
 	public void ringAlarm(String event) {
@@ -13,7 +34,10 @@ public class MobilePhone extends OldPhone {
 	}
 	
 	public void printLastNumbers() {
-		System.out.println(this.number);
+		System.out.println("Recent contacts: ")
+		for(int count = 0; count < 10; count++) {
+			System.out.println(callNumbers[count]);
+		}
 	}
 	
 }
