@@ -6,6 +6,16 @@ public class PhoneLauncher {
 	}
 	
 	public void launch() {
+		RestrictedSmartPhone myRestrictedPhone = new RestrictedSmartPhone("brand");
+		myRestrictedPhone.call("01");
+		myRestrictedPhone.call("02");
+		myRestrictedPhone.ringAlarm("Wake Up!");
+		myRestrictedPhone.playGame("Minesweeper");
+		myRestrictedPhone.printLastNumbers();
+		myRestrictedPhone.browseWeb("Google");
+		myRestrictedPhone.findPosition();
+		System.out.println(myRestrictedPhone.getBrand());
+		
 		SmartPhone myphone = new SmartPhone("brand");
 		myphone.call("01");
 		myphone.call("02");
